@@ -1,0 +1,9 @@
+[submodule "zeplin.ui"]
+	path = zeplin.ui
+	url = https://github.com/cs1193/zeplin.ui.git
+[submodule "zeplin.api"]
+	path = zeplin.api
+	url = https://github.com/cs1193/zeplin.api.git
+[submodule "zeplin.db"]
+	path = zeplin.db
+	url = https://github.com/cs1193/zeplin.db.git

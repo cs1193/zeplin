@@ -1,0 +1,28 @@
+version: '3'
+services:
+  zeplin.db:
+    build: ./zeplin.db
+    volumes:
+      - /data/db:/data/db
+    networks:
+      - zeplin.network
+
+  zeplin.api:
+    build: ./zeplin.api
+    links:
+      - zeplin.db
+    ports:
+      - 38143:38143
+    networks:
+      - zeplin.network
+
+  zeplin.ui:
+    build: ./zeplin.ui
+    ports:
+      - 38141:38141
+    networks:
+      - zeplin.network
+
+networks:
+  zeplin.network:
+    driver: bridge
